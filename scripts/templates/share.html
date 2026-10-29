@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0d0a08">
+<title>__TITLE__</title>
+<style>
+  :root { --bg:#0d0a08; --card:#17120e; --line:#2a211a; --text:#ede6da; --muted:#9c8f80; --accent:#d9a86c; --ok:#8fbf8a; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         padding:16px 16px calc(24px + env(safe-area-inset-bottom)); }
+  main { max-width:480px; margin:0 auto; }
+  header { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:12px; }
+  header b { letter-spacing:.04em; }
+  .when { color:var(--muted); font-size:14px; }
+  .preview { width:100%; border-radius:14px; overflow:hidden; background:#000; border:1px solid var(--line); }
+  .preview img, .preview video { display:block; width:100%; height:auto; }
+  .format { margin:14px 0 4px; font-size:15px; }
+  .format strong { color:var(--accent); }
+  button, .btn { display:block; width:100%; border:0; border-radius:12px; padding:16px; font-family:inherit; font-weight:600; font-size:17px; line-height:1.2; text-align:center;
+                 text-decoration:none; cursor:pointer; margin-top:10px; }
+  #share { background:var(--text); color:#120d09; font-size:19px; padding:20px; }
+  #share[disabled] { opacity:.5; }
+  .secondary { background:var(--card); color:var(--text); border:1px solid var(--line); }
+  #status { min-height:1.4em; margin:10px 2px 0; font-size:14px; color:var(--muted); }
+  #status.ok { color:var(--ok); }
+  section { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 16px; margin-top:16px; }
+  h2 { font-size:13px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 8px; }
+  .caption { font-size:18px; white-space:pre-wrap; }
+  .caption.empty { color:var(--muted); font-style:italic; font-size:15px; }
+  ol { margin:0; padding-left:20px; }
+  li { margin:8px 0; }
+  li .why { color:var(--muted); font-size:14px; }
+  .note { color:var(--accent); font-size:14px; margin-top:8px; }
+</style>
+</head>
+<body>
+<main>
+  <header><b>eliott.elite</b><span class="when" id="when"></span></header>
+  <div class="preview" id="preview"></div>
+  <p class="format">Dans Instagram, choisis : <strong id="format"></strong></p>
+
+  <button id="share" disabled>Préparation du fichier…</button>
+  <button id="copy" class="secondary">Copier la légende</button>
+  <a id="download" class="btn secondary" download>Télécharger le fichier</a>
+  <p id="status" role="status"></p>
+
+  <section><h2>Légende</h2><div class="caption" id="caption"></div></section>
+  <section id="sounds-box"><h2>Sons conseillés</h2><ol id="sounds"></ol><p class="note" id="volume"></p></section>
+</main>
+
+<script id="data" type="application/json">__DATA__</script>
+<script>
+(function () {
+  var d = JSON.parse(document.getElementById("data").textContent);
+  var $ = function (id) { return document.getElementById(id); };
+  var status = function (msg, ok) { $("status").textContent = msg; $("status").className = ok ? "ok" : ""; };
+  var isVideo = /\.mp4($|\?)/i.test(d.media_url);
+  var file = null;
+
+  // Preview, labels
+  var el = document.createElement(isVideo ? "video" : "img");
+  el.src = d.media_url;
+  if (isVideo) { el.controls = true; el.playsInline = true; el.muted = true; el.loop = true; el.autoplay = true; }
+  else { el.alt = "aperçu"; }
+  $("preview").appendChild(el);
+  $("format").textContent = d.format;
+  $("when").textContent = d.when || "";
+  $("caption").textContent = d.caption || "(aucune légende)";
+  if (!d.caption) $("caption").className = "caption empty";
+  $("download").href = d.media_url;
+  if (d.sounds && d.sounds.length) {
+    d.sounds.forEach(function (s) {
+      var li = document.createElement("li");
+      li.innerHTML = "<b></b> — <span></span>" + (s.passage ? " · <i></i>" : "") + "<div class='why'></div>";
+      li.querySelector("b").textContent = s.title;
+      li.querySelector("span").textContent = s.artist;
+      if (s.passage) li.querySelector("i").textContent = "passage " + s.passage;
+      li.querySelector(".why").textContent = s.why;
+      $("sounds").appendChild(li);
+    });
+  } else { $("sounds-box").style.display = "none"; }
+  if (d.volume_hint) $("volume").textContent = d.volume_hint;
+
+  // Copy caption. Synchronous execCommand first (works inside the tap on iOS), Clipboard API otherwise.
+  function copyCaption() {
+    if (!d.caption) return true;
+    var ta = document.createElement("textarea");
+    ta.value = d.caption; ta.setAttribute("readonly", ""); ta.style.cssText = "position:fixed;top:0;left:0;opacity:0;";
+    document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, ta.value.length);
+    var done = false;
+    try { done = document.execCommand("copy"); } catch (e) {}
+    document.body.removeChild(ta);
+    if (!done && navigator.clipboard) { navigator.clipboard.writeText(d.caption).catch(function () {}); done = true; }
+    return done;
+  }
+
+  // The file is fetched up front: Safari only allows navigator.share() directly inside the tap,
+  // so nothing asynchronous may run between the tap and the share call.
+  fetch(d.media_url, { cache: "force-cache" })
+    .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.blob(); })
+    .then(function (blob) {
+      var type = isVideo ? "video/mp4" : "image/jpeg";
+      file = new File([blob], d.file_name, { type: type });
+      var can = navigator.canShare && navigator.canShare({ files: [file] });
+      $("share").disabled = false;
+      $("share").textContent = can ? "Ouvrir dans Instagram" : "Partage non pris en charge";
+      if (!can) { $("share").disabled = true; status("Ce navigateur ne sait pas partager un fichier : utilise « Télécharger le fichier », puis publie depuis Instagram."); }
+    })
+    .catch(function (e) { $("share").textContent = "Fichier indisponible"; status("Impossible de charger le média (" + e.message + "). Réessaie dans une minute."); });
+
+  $("share").addEventListener("click", function () {
+    if (!file) return;
+    var copied = copyCaption();
+    // Files only: adding text/title makes some apps (Instagram on Android) drop the file.
+    navigator.share({ files: [file] })
+      .then(function () { status(copied ? "Envoyé. Légende copiée : colle-la dans Instagram." : "Envoyé. Copie la légende avec le bouton ci-dessus.", true); })
+      .catch(function (e) {
+        if (e && e.name === "AbortError") status("Partage annulé." + (copied ? " La légende est copiée." : ""));
+        else status("Le partage a échoué (" + (e && e.name) + ") : utilise « Télécharger le fichier ».");
+      });
+  });
+
+  $("copy").addEventListener("click", function () {
+    status(copyCaption() ? "Légende copiée." : "Copie impossible : sélectionne la légende à la main.", true);
+  });
+})();
+</script>
+</body>
+</html>

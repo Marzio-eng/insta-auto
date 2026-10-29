@@ -93,9 +93,36 @@ Objectif : cohérence de grille, **aucun filtre visible**.
 - Posts : 3-5 / semaine. Reels : 3 / semaine. Fenêtre 17h-22h, jamais à heure ronde, ≤ 1 post ou Reel par jour.
 - Réutilisation d'un média : 2 fois max, ≥ 60 jours d'écart, format différent.
 
-## 7. Musique des Reels
+## 7. Musique — vraie musique Instagram, mode semi-automatique
 
-- Uniquement les pistes de `Insta/musique` (libres de droits, fournies par Eliott), nommées `mood_bpm_titre.mp3`.
-- Jamais de musique protégée trouvée ailleurs.
-- Fondu d'entrée et de sortie, volume homogène (normalisation loudness).
-- Si un Reel mérite un son tendance Instagram : `"son_tendance": true` → pas de publication automatique, publication manuelle depuis l'appli.
+L'API Instagram ne permet pas d'ajouter un son de la bibliothèque Instagram. Or on veut le **vrai son Instagram** (titre visible sur la publication). Donc :
+
+- **Aucune musique n'est jamais intégrée dans les fichiers**, et aucune musique protégée n'est utilisée.
+- Chaque publication a un champ `"musique"` :
+  - `false` → publiée automatiquement par l'API ;
+  - `true` → **semi-automatique** : tout est préparé (montage, recadrage, étalonnage, légende), mais c'est Eliott qui publie depuis l'appli Instagram en choisissant le son.
+
+### Répartition
+| Format | Règle |
+|---|---|
+| **Reels** | toujours `true` (sauf Reel où Eliott parle, voir plus bas) |
+| **Stories** | **≥ 70 % `true`**, ≤ 30 % `false` — vérifié sur chaque **semaine glissante** dans `data/calendar.json`. Les `false` sont les stories où la musique n'a pas sa place : texte / stats, info pratique, vidéo parlée. |
+| **Posts / carrousels** | `false` par défaut, `true` seulement quand le post s'y prête vraiment (ambiance, voyage, soirée, sport…) |
+
+### Vidéos où Eliott parle
+- Détection de la voix : analyse audio ffmpeg (niveaux, bande de fréquences de la parole, `silencedetect`) **et** vérification en regardant/écoutant quelques extraits.
+- Le son d'origine est **toujours conservé**, la voix parfaitement audible ; **on ne coupe jamais une phrase** au montage.
+- Par défaut **pas de musique** (`false`) : ces stories comptent dans les 30 % sans musique ; les Reels parlés sont l'exception à « Reels → toujours `true` ».
+- Si une ambiance discrète apporte vraiment quelque chose : `true`, et la page de partage indique de **baisser la musique à ~10-20 %** dans Instagram, son d'origine à 100 %.
+
+### Choix des sons
+- Le son **colle au contexte précis** : lieu, moment, ambiance, action, rythme de la vidéo.
+  - coucher de soleil en Toscane → italien ou chill ;
+  - sac de frappe la nuit → sombre et rythmé ;
+  - voiture de nuit → lent et grave.
+- Jamais un son choisi *uniquement* parce qu'il est tendance.
+- Pour chaque publication `true` : **2 ou 3 sons Instagram** (titre exact + artiste), chacun avec **une phrase de justification** et le passage à utiliser si utile.
+
+### Page de partage
+Pour chaque publication `true`, une page `docs/share/<id>.html` (servie par GitHub Pages, pensée pour le téléphone) :
+aperçu du média · gros bouton **« Ouvrir dans Instagram »** (API Web Share : le fichier arrive directement dans l'éditeur Instagram, et la légende est copiée au même clic) · bouton « Copier la légende » de secours · sons conseillés · format à choisir (Story / Reel / Publication) · bouton « Télécharger le fichier » si le partage n'est pas pris en charge.

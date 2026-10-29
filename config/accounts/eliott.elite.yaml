@@ -12,7 +12,7 @@ drive:
   sa_json_env: GDRIVE_SA_JSON
   folder_id_env: GDRIVE_FOLDER_ID
   inbox: inbox
-  music: musique
+  music: musique                   # plus utilisé (musique choisie dans Instagram)
   archive: archive
 media_host:
   base_url: https://marzio-eng.github.io/insta-auto/media
@@ -56,3 +56,22 @@ captions:
   emojis: rare
 
 inspiration_accounts: [keo.snb, keo0, marvinndiaye_, yomidenzel]
+
+# Musique : jamais intégrée aux fichiers. "musique": true = semi-automatique
+# (Eliott publie depuis l'appli avec un vrai son Instagram, via la page de partage).
+music:
+  embed_in_files: false
+  reels_default: true                # sauf Reel parlé -> false par défaut
+  posts_default: false               # true seulement si le post s'y prête vraiment
+  stories_min_with_music: 0.70       # sur chaque semaine glissante (7 jours)
+  stories_ratio_window_days: 7
+  speech:
+    keep_original_audio: true        # voix toujours audible, jamais de phrase coupée
+    default_music: false
+    music_volume_hint: "10-20 %"     # si musique sous la voix
+  suggestions_per_post: [2, 3]       # titre exact + artiste + justification
+semi_auto:
+  share_pages_dir: docs/share
+  share_base_url: https://marzio-eng.github.io/insta-auto/share
+  notify: github_issue               # issue assignée à Eliott à l'heure prévue
+  notify_assignee: Marzio-eng
