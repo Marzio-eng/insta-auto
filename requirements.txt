@@ -1,0 +1,3 @@
+requests>=2.31
+cryptography>=42   # RS256 signature of the Google service-account JWT (Drive only)
+pyyaml>=6          # config/accounts/*.yaml

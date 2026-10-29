@@ -1,0 +1,58 @@
+# Réglages du compte. Aucun secret ici : le dépôt est public.
+# Les jetons viennent des variables d'environnement / secrets GitHub nommés ci-dessous.
+handle: eliott.elite
+platform: instagram
+api:
+  host: graph.facebook.com          # Instagram API with Facebook Login
+  version: v26.0
+  token_env: IG_TOKEN               # jeton de Page (n'expire pas, mais voir data_access_expires_at)
+  user_id_env: IG_USER_ID
+  facebook_page: Eliott Elite
+drive:
+  sa_json_env: GDRIVE_SA_JSON
+  folder_id_env: GDRIVE_FOLDER_ID
+  inbox: inbox
+  music: musique
+  archive: archive
+media_host:
+  base_url: https://marzio-eng.github.io/insta-auto/media
+  repo_dir: docs/media
+timezone: Europe/Paris
+language: en
+
+cadence:
+  stories:
+    per_day: [2, 3]
+    window: ["10:00", "23:30"]
+    min_gap_hours: 2
+  posts:
+    per_week: [3, 5]
+  reels:
+    per_week: 3
+  feed_window: ["17:00", "22:00"]   # posts + reels
+  avoid_round_minutes: true          # jamais :00 / :30
+  max_feed_per_day: 1                # post OU reel, sauf exception justifiée
+  planning_horizon_days: 14
+  propose_ahead_hours: 48
+  approval_deadline_hours: 2         # PR non mergée 2 h avant -> on ne publie pas
+
+formats:
+  post:   {width: 1080, height: 1350, codec: jpeg, carousel_max: 10}
+  story:  {width: 1080, height: 1920}
+  reel:   {width: 1080, height: 1920, video: h264, audio: aac, duration_s: [7, 30]}
+
+mix:
+  lifestyle: 0.8
+  sport_max: 0.2
+
+reuse:
+  max_uses: 2
+  min_gap_days: 60
+  require_different_format: true
+
+captions:
+  max_words: 6
+  max_hashtags: 3
+  emojis: rare
+
+inspiration_accounts: [keo.snb, keo0, marvinndiaye_, yomidenzel]

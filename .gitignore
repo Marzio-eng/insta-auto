@@ -1,0 +1,9 @@
+# never commit credentials
+*.key.json
+*service-account*.json
+sa.json
+.env
+# local work files
+__pycache__/
+work/
+*.tmp
