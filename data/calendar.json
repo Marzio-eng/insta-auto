@@ -1,1 +1,438 @@
-{"timezone": "Europe/Paris", "generated_at": null, "slots": []}
+{
+ "timezone": "Europe/Paris",
+ "generated_at": "2026-10-30T11:26:50+01:00",
+ "slots": [
+  {
+   "id": "20261031-story1",
+   "date": "2026-10-31",
+   "type": "story",
+   "time": "16:02",
+   "scheduled_at": "2026-10-31T16:02:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261031-carousel",
+   "date": "2026-10-31",
+   "type": "carousel",
+   "time": "18:49",
+   "scheduled_at": "2026-10-31T18:49:00+01:00",
+   "musique": false,
+   "status": "planned"
+  },
+  {
+   "id": "20261031-story2",
+   "date": "2026-10-31",
+   "type": "story",
+   "time": "20:40",
+   "scheduled_at": "2026-10-31T20:40:00+01:00",
+   "musique": false,
+   "status": "planned"
+  },
+  {
+   "id": "20261101-story1",
+   "date": "2026-11-01",
+   "type": "story",
+   "time": "11:28",
+   "scheduled_at": "2026-11-01T11:28:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261101-story2",
+   "date": "2026-11-01",
+   "type": "story",
+   "time": "17:24",
+   "scheduled_at": "2026-11-01T17:24:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261101-reel",
+   "date": "2026-11-01",
+   "type": "reel",
+   "time": "21:42",
+   "scheduled_at": "2026-11-01T21:42:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261102-carousel",
+   "date": "2026-11-02",
+   "type": "carousel",
+   "time": "18:36",
+   "scheduled_at": "2026-11-02T18:36:00+01:00",
+   "musique": false,
+   "status": "planned"
+  },
+  {
+   "id": "20261102-story1",
+   "date": "2026-11-02",
+   "type": "story",
+   "time": "19:33",
+   "scheduled_at": "2026-11-02T19:33:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261102-story2",
+   "date": "2026-11-02",
+   "type": "story",
+   "time": "21:38",
+   "scheduled_at": "2026-11-02T21:38:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261103-story1",
+   "date": "2026-11-03",
+   "type": "story",
+   "time": "11:39",
+   "scheduled_at": "2026-11-03T11:39:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261103-story2",
+   "date": "2026-11-03",
+   "type": "story",
+   "time": "19:20",
+   "scheduled_at": "2026-11-03T19:20:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261103-reel",
+   "date": "2026-11-03",
+   "type": "reel",
+   "time": "21:32",
+   "scheduled_at": "2026-11-03T21:32:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261103-story3",
+   "date": "2026-11-03",
+   "type": "story",
+   "time": "22:09",
+   "scheduled_at": "2026-11-03T22:09:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261104-story1",
+   "date": "2026-11-04",
+   "type": "story",
+   "time": "15:21",
+   "scheduled_at": "2026-11-04T15:21:00+01:00",
+   "musique": false,
+   "status": "planned"
+  },
+  {
+   "id": "20261104-story2",
+   "date": "2026-11-04",
+   "type": "story",
+   "time": "17:56",
+   "scheduled_at": "2026-11-04T17:56:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261104-carousel",
+   "date": "2026-11-04",
+   "type": "carousel",
+   "time": "18:32",
+   "scheduled_at": "2026-11-04T18:32:00+01:00",
+   "musique": false,
+   "status": "planned"
+  },
+  {
+   "id": "20261104-story3",
+   "date": "2026-11-04",
+   "type": "story",
+   "time": "19:59",
+   "scheduled_at": "2026-11-04T19:59:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261105-story1",
+   "date": "2026-11-05",
+   "type": "story",
+   "time": "11:23",
+   "scheduled_at": "2026-11-05T11:23:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261105-story2",
+   "date": "2026-11-05",
+   "type": "story",
+   "time": "19:48",
+   "scheduled_at": "2026-11-05T19:48:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261105-carousel",
+   "date": "2026-11-05",
+   "type": "carousel",
+   "time": "19:55",
+   "scheduled_at": "2026-11-05T19:55:00+01:00",
+   "musique": false,
+   "status": "planned"
+  },
+  {
+   "id": "20261106-story1",
+   "date": "2026-11-06",
+   "type": "story",
+   "time": "11:14",
+   "scheduled_at": "2026-11-06T11:14:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261106-story2",
+   "date": "2026-11-06",
+   "type": "story",
+   "time": "14:54",
+   "scheduled_at": "2026-11-06T14:54:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261106-carousel",
+   "date": "2026-11-06",
+   "type": "carousel",
+   "time": "18:17",
+   "scheduled_at": "2026-11-06T18:17:00+01:00",
+   "musique": false,
+   "status": "planned"
+  },
+  {
+   "id": "20261106-story3",
+   "date": "2026-11-06",
+   "type": "story",
+   "time": "20:23",
+   "scheduled_at": "2026-11-06T20:23:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261107-story1",
+   "date": "2026-11-07",
+   "type": "story",
+   "time": "10:40",
+   "scheduled_at": "2026-11-07T10:40:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261107-story2",
+   "date": "2026-11-07",
+   "type": "story",
+   "time": "17:11",
+   "scheduled_at": "2026-11-07T17:11:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261107-reel",
+   "date": "2026-11-07",
+   "type": "reel",
+   "time": "19:40",
+   "scheduled_at": "2026-11-07T19:40:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261107-story3",
+   "date": "2026-11-07",
+   "type": "story",
+   "time": "21:24",
+   "scheduled_at": "2026-11-07T21:24:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261108-story1",
+   "date": "2026-11-08",
+   "type": "story",
+   "time": "10:23",
+   "scheduled_at": "2026-11-08T10:23:00+01:00",
+   "musique": false,
+   "status": "planned"
+  },
+  {
+   "id": "20261108-story2",
+   "date": "2026-11-08",
+   "type": "story",
+   "time": "15:55",
+   "scheduled_at": "2026-11-08T15:55:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261108-reel",
+   "date": "2026-11-08",
+   "type": "reel",
+   "time": "21:12",
+   "scheduled_at": "2026-11-08T21:12:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261108-story3",
+   "date": "2026-11-08",
+   "type": "story",
+   "time": "21:24",
+   "scheduled_at": "2026-11-08T21:24:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261109-story1",
+   "date": "2026-11-09",
+   "type": "story",
+   "time": "12:50",
+   "scheduled_at": "2026-11-09T12:50:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261109-story2",
+   "date": "2026-11-09",
+   "type": "story",
+   "time": "17:39",
+   "scheduled_at": "2026-11-09T17:39:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261109-reel",
+   "date": "2026-11-09",
+   "type": "reel",
+   "time": "18:10",
+   "scheduled_at": "2026-11-09T18:10:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261110-story1",
+   "date": "2026-11-10",
+   "type": "story",
+   "time": "17:05",
+   "scheduled_at": "2026-11-10T17:05:00+01:00",
+   "musique": false,
+   "status": "planned"
+  },
+  {
+   "id": "20261110-carousel",
+   "date": "2026-11-10",
+   "type": "carousel",
+   "time": "18:58",
+   "scheduled_at": "2026-11-10T18:58:00+01:00",
+   "musique": false,
+   "status": "planned"
+  },
+  {
+   "id": "20261110-story2",
+   "date": "2026-11-10",
+   "type": "story",
+   "time": "19:23",
+   "scheduled_at": "2026-11-10T19:23:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261110-story3",
+   "date": "2026-11-10",
+   "type": "story",
+   "time": "22:03",
+   "scheduled_at": "2026-11-10T22:03:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261111-story1",
+   "date": "2026-11-11",
+   "type": "story",
+   "time": "13:57",
+   "scheduled_at": "2026-11-11T13:57:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261111-reel",
+   "date": "2026-11-11",
+   "type": "reel",
+   "time": "18:33",
+   "scheduled_at": "2026-11-11T18:33:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261111-story2",
+   "date": "2026-11-11",
+   "type": "story",
+   "time": "21:14",
+   "scheduled_at": "2026-11-11T21:14:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261112-story1",
+   "date": "2026-11-12",
+   "type": "story",
+   "time": "10:04",
+   "scheduled_at": "2026-11-12T10:04:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261112-story2",
+   "date": "2026-11-12",
+   "type": "story",
+   "time": "12:29",
+   "scheduled_at": "2026-11-12T12:29:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261112-story3",
+   "date": "2026-11-12",
+   "type": "story",
+   "time": "14:48",
+   "scheduled_at": "2026-11-12T14:48:00+01:00",
+   "musique": true,
+   "status": "planned"
+  },
+  {
+   "id": "20261112-carousel",
+   "date": "2026-11-12",
+   "type": "carousel",
+   "time": "18:04",
+   "scheduled_at": "2026-11-12T18:04:00+01:00",
+   "musique": false,
+   "status": "planned"
+  },
+  {
+   "id": "20261113-story1",
+   "date": "2026-11-13",
+   "type": "story",
+   "time": "17:47",
+   "scheduled_at": "2026-11-13T17:47:00+01:00",
+   "musique": false,
+   "status": "planned"
+  },
+  {
+   "id": "20261113-story2",
+   "date": "2026-11-13",
+   "type": "story",
+   "time": "23:18",
+   "scheduled_at": "2026-11-13T23:18:00+01:00",
+   "musique": true,
+   "status": "planned"
+  }
+ ]
+}

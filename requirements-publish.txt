@@ -1,0 +1,3 @@
+# GitHub Actions publisher only
+requests>=2.31
+pyyaml>=6

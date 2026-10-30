@@ -1,3 +1,9 @@
+# Preparation task (Claude cloud session)
 requests>=2.31
-cryptography>=42   # RS256 signature of the Google service-account JWT (Drive only)
-pyyaml>=6          # config/accounts/*.yaml
+pyyaml>=6
+cryptography>=42      # RS256 signature of the Google service-account JWT (Drive)
+pillow>=10
+pillow-heif>=0.16     # iPhone HEIC photos
+numpy>=1.26
+silero-vad>=5         # speech detection in videos (model bundled in the package)
+onnxruntime>=1.17
