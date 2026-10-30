@@ -3468,7 +3468,15 @@
    "summary": "Eliott from behind, shirtless, looking over turquoise cove",
    "ideas": "carousel Corsica, story"
   },
-  "uses": [],
+  "uses": [
+   {
+    "format": "carousel",
+    "date": "2026-10-31",
+    "slot": "20261031-carousel",
+    "status": "proposed",
+    "pr": 1
+   }
+  ],
   "meta": {
    "width": 4284,
    "height": 5712,
@@ -3684,7 +3692,15 @@
    "summary": "Bonifacio cliff at dusk, sea, warm light on rock",
    "ideas": "carousel Bonifacio cover"
   },
-  "uses": [],
+  "uses": [
+   {
+    "format": "carousel",
+    "date": "2026-10-31",
+    "slot": "20261031-carousel",
+    "status": "proposed",
+    "pr": 1
+   }
+  ],
   "meta": {
    "width": 4284,
    "height": 5712,
@@ -3759,7 +3775,15 @@
    "summary": "Bonifacio houses on cliff edge at dusk",
    "ideas": "carousel Bonifacio"
   },
-  "uses": [],
+  "uses": [
+   {
+    "format": "carousel",
+    "date": "2026-10-31",
+    "slot": "20261031-carousel",
+    "status": "proposed",
+    "pr": 1
+   }
+  ],
   "meta": {
    "width": 4284,
    "height": 5712,
@@ -3907,7 +3931,15 @@
    "summary": "lit stone stairs to citadel gate at blue hour",
    "ideas": "carousel Bonifacio"
   },
-  "uses": [],
+  "uses": [
+   {
+    "format": "carousel",
+    "date": "2026-10-31",
+    "slot": "20261031-carousel",
+    "status": "proposed",
+    "pr": 1
+   }
+  ],
   "meta": {
    "width": 4284,
    "height": 5712,
@@ -4017,7 +4049,15 @@
    "summary": "small lit chapel in old town alley at night",
    "ideas": "carousel Bonifacio"
   },
-  "uses": [],
+  "uses": [
+   {
+    "format": "carousel",
+    "date": "2026-10-31",
+    "slot": "20261031-carousel",
+    "status": "proposed",
+    "pr": 1
+   }
+  ],
   "meta": {
    "width": 4284,
    "height": 5712,

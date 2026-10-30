@@ -18,7 +18,15 @@
    "time": "18:49",
    "scheduled_at": "2026-10-31T18:49:00+01:00",
    "musique": false,
-   "status": "planned"
+   "status": "proposed",
+   "pr": 1,
+   "library_ids": [
+    "m0089",
+    "m0087",
+    "m0082",
+    "m0093",
+    "m0096"
+   ]
   },
   {
    "id": "20261031-story2",
