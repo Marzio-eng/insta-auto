@@ -3,7 +3,9 @@
 ## Phase 1 — fondations ✅
 Environnement, Drive, API Instagram, Business Discovery (4/4), structure du dépôt, GitHub Pages, conteneur de test accepté sans publication.
 
-## Phase 2 — posts et stories de bout en bout (avec mode semi-automatique)
+## Phase 2 — posts et stories de bout en bout (avec mode semi-automatique) 🟡 en test
+Mode opératoire de la tâche quotidienne : `ops/daily.md`. Premières PR : carrousel Bonifacio (auto) et stories du 31/10.
+
 
 ### Format d'une publication en file d'attente (`queue/<date>_<type>_<id>.json`)
 ```json

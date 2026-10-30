@@ -21,7 +21,8 @@ data/stats/                     statistiques par publication
 docs/media/                     fichiers servis par GitHub Pages (JPEG / MP4)
 queue/                          publications validées (1 JSON chacune)
 published/                      historique publié (avec l'ID Instagram)
-scripts/                        code Python (requests, cryptography, pyyaml)
+scripts/                        code Python (voir requirements*.txt)
+ops/daily.md                    mode opératoire de la tâche quotidienne
 .github/workflows/              publication, vérification du jeton
 ```
 
