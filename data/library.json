@@ -5150,7 +5150,15 @@
    "summary": "superyacht lit at night, reflections",
    "ideas": "carousel night, story"
   },
-  "uses": [],
+  "uses": [
+   {
+    "format": "story",
+    "date": "2026-10-31",
+    "slot": "20261031-story2",
+    "status": "proposed",
+    "pr": 2
+   }
+  ],
   "meta": {
    "width": 3213,
    "height": 5712,
@@ -6953,7 +6961,15 @@
    "summary": "espresso-martini style cocktail on table, golden beach club",
    "ideas": "story, reel"
   },
-  "uses": [],
+  "uses": [
+   {
+    "format": "story",
+    "date": "2026-10-31",
+    "slot": "20261031-story1",
+    "status": "proposed",
+    "pr": 2
+   }
+  ],
   "meta": {
    "width": 2160,
    "height": 3840,

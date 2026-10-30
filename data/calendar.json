@@ -9,7 +9,11 @@
    "time": "16:02",
    "scheduled_at": "2026-10-31T16:02:00+01:00",
    "musique": true,
-   "status": "planned"
+   "status": "proposed",
+   "pr": 2,
+   "library_ids": [
+    "m0165"
+   ]
   },
   {
    "id": "20261031-carousel",
@@ -35,7 +39,11 @@
    "time": "20:40",
    "scheduled_at": "2026-10-31T20:40:00+01:00",
    "musique": false,
-   "status": "planned"
+   "status": "proposed",
+   "pr": 2,
+   "library_ids": [
+    "m0121"
+   ]
   },
   {
    "id": "20261101-story1",
