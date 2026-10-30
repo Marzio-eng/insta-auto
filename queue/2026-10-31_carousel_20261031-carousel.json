@@ -1,0 +1,75 @@
+{
+  "id": "20261031-carousel",
+  "account": "eliott.elite",
+  "type": "carousel",
+  "scheduled_at": "2026-10-31T18:49:00+01:00",
+  "caption": "✨🇫🇷",
+  "media": [
+    {
+      "url": "https://marzio-eng.github.io/insta-auto/media/20261031-carousel_1_16fc9e.jpg",
+      "kind": "image",
+      "library_id": "m0089",
+      "render": {
+        "focus": [
+          0.5,
+          0.5
+        ]
+      }
+    },
+    {
+      "url": "https://marzio-eng.github.io/insta-auto/media/20261031-carousel_2_cb17bf.jpg",
+      "kind": "image",
+      "library_id": "m0087",
+      "render": {
+        "focus": [
+          0.5,
+          0.5
+        ]
+      }
+    },
+    {
+      "url": "https://marzio-eng.github.io/insta-auto/media/20261031-carousel_3_746321.jpg",
+      "kind": "image",
+      "library_id": "m0082",
+      "render": {
+        "focus": [
+          0.5,
+          0.45
+        ]
+      }
+    },
+    {
+      "url": "https://marzio-eng.github.io/insta-auto/media/20261031-carousel_4_db8e22.jpg",
+      "kind": "image",
+      "library_id": "m0093",
+      "render": {
+        "focus": [
+          0.5,
+          0.5
+        ]
+      }
+    },
+    {
+      "url": "https://marzio-eng.github.io/insta-auto/media/20261031-carousel_5_7c429c.jpg",
+      "kind": "image",
+      "library_id": "m0096",
+      "render": {
+        "focus": [
+          0.5,
+          0.45
+        ]
+      }
+    }
+  ],
+  "musique": false,
+  "voix": false,
+  "sons_conseilles": [],
+  "library_ids": [
+    "m0089",
+    "m0087",
+    "m0082",
+    "m0093",
+    "m0096"
+  ],
+  "why": "Bonifacio, du coucher du soleil à la nuit : falaise dorée en couverture, puis la mer, toi de dos au-dessus de la crique (respiration humaine au milieu), les escaliers éclairés de la citadelle et la chapelle la nuit. Ambiance « blue hour » sombre et chaude dans l'esprit keo.snb, même lieu et même journée (7 juillet 2025). Légende en écho à ton « ✨🇮🇹 » pour la cohérence de grille. Auto (sans musique) : un carrousel photo n'en a pas besoin, et c'est le premier test de publication automatique."
+}
