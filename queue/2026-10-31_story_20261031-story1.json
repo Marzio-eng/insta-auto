@@ -1,0 +1,44 @@
+{
+  "id": "20261031-story1",
+  "account": "eliott.elite",
+  "type": "story",
+  "scheduled_at": "2026-10-31T16:02:00+01:00",
+  "caption": "",
+  "media": [
+    {
+      "url": "https://marzio-eng.github.io/insta-auto/media/20261031-story1_1_c2e5c5.mp4",
+      "kind": "video",
+      "library_id": "m0165",
+      "render": {
+        "start": 0,
+        "duration": 3.0,
+        "focus_x": 0.45,
+        "keep_audio": true
+      }
+    }
+  ],
+  "musique": true,
+  "voix": false,
+  "sons_conseilles": [
+    {
+      "titre": "Lady (Hear Me Tonight)",
+      "artiste": "Modjo",
+      "pourquoi": "Classique French Touch de beach club, colle au lieu et à la lumière dorée."
+    },
+    {
+      "titre": "Innerbloom",
+      "artiste": "RÜFÜS DU SOL",
+      "pourquoi": "Ambient et ample, épouse le rythme lent du plan."
+    },
+    {
+      "titre": "Cola",
+      "artiste": "CamelPhat & Elderbrook",
+      "pourquoi": "House lente de fin de journée en club de plage."
+    }
+  ],
+  "library_ids": [
+    "m0165"
+  ],
+  "why": "Cocktail à l'heure dorée au club de plage (La Grande-Motte), lits en arrière-plan : on montre l'ambiance sans rien expliquer. Coupé à 3 s avant qu'une main n'entre dans le cadre.",
+  "share_page": "https://marzio-eng.github.io/insta-auto/share/20261031-story1.html"
+}
