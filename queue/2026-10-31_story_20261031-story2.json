@@ -1,0 +1,28 @@
+{
+  "id": "20261031-story2",
+  "account": "eliott.elite",
+  "type": "story",
+  "scheduled_at": "2026-10-31T20:40:00+01:00",
+  "caption": "",
+  "media": [
+    {
+      "url": "https://marzio-eng.github.io/insta-auto/media/20261031-story2_1_46f373.jpg",
+      "kind": "image",
+      "library_id": "m0121",
+      "render": {
+        "focus": [
+          0.6,
+          0.45
+        ],
+        "zoom": 1.12
+      }
+    }
+  ],
+  "musique": false,
+  "voix": false,
+  "sons_conseilles": [],
+  "library_ids": [
+    "m0121"
+  ],
+  "why": "Superyacht illuminé de nuit, reflets sur l'eau noire (port de La Ciotat). Plan fixe et silencieux à 20h40 : la musique n'apporte rien, la story compte dans les 30 % sans musique et sera publiée automatiquement (test d'une story photo par l'API)."
+}
